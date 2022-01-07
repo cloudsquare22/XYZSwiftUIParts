@@ -10,12 +10,11 @@ import SwiftUI
 public struct NumberPlusMinusInputView: View {
     var title: String? = nil
     let bounds: ClosedRange<Int>
-    @Binding var number: Int
+    @State var number: Int = 1
      
-    public init(title: String? = nil, bounds: ClosedRange<Int>, number: Binding<Int>) {
+    public init(title: String? = nil, bounds: ClosedRange<Int>) {
         self.title = title
         self.bounds = bounds
-        self._number = number
     }
     
     public var body: some View {
@@ -35,8 +34,7 @@ struct NumberPlusMinusInputView_Previews: PreviewProvider {
     @State static var example = 1
     static var previews: some View {
         NumberPlusMinusInputView(title: "Preview",
-                                 bounds: 1...30,
-                                 number: NumberPlusMinusInputView_Previews.$example)
+                                 bounds: 1...30)
             .padding()
     }
 }
