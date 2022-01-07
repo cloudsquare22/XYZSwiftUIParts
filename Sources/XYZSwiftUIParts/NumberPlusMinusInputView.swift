@@ -12,7 +12,7 @@ public struct NumberPlusMinusInputView: View {
     let bounds: ClosedRange<Int>
     @Binding var number: Int
      
-    init(title: String? = nil, bounds: ClosedRange<Int>, number: Binding<Int>) {
+    public init(title: String? = nil, bounds: ClosedRange<Int>, number: Binding<Int>) {
         self.title = title
         self.bounds = bounds
         self._number = number
