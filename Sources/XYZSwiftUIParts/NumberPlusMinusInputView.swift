@@ -12,6 +12,12 @@ public struct NumberPlusMinusInputView: View {
     let bounds: ClosedRange<Int>
     @Binding var number: Int
      
+    init(title: String? = nil, bounds: ClosedRange<Int>, number: Binding<Int>) {
+        self.title = title
+        self.bounds = bounds
+        self._number = number
+    }
+    
     public var body: some View {
         HStack {
             if let title = self.title {
