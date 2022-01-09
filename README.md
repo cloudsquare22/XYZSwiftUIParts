@@ -12,3 +12,15 @@ NumberPlusMinusInputView(title: "Disp min tracks", bounds: 1...100, number: self
         // Value Change Action
     }
 ```
+
+## CheckboxView
+![](https://github.com/cloudsquare22/XYZSwiftUIParts/blob/main/docresource/checkboxview_off.png)
+![](https://github.com/cloudsquare22/XYZSwiftUIParts/blob/main/docresource/checkboxview_on.png)
+
+Example
+``` swift
+CheckboxView(title: "Auto Play", check: self.$music.autoPlay, checkboxFont: .title)
+    .onChange(of: self.music.autoPlay) { newValue in
+        // Value Change Action
+    }
+```
