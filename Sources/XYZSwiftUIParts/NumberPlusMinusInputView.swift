@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+/// A control that performs increment and decrement actions.
 public struct NumberPlusMinusInputView: View {
     var title: String? = nil
     let bounds: ClosedRange<Int>
     @Binding var number: Int
      
+    /// Creates a NumberPlusMinusInputView.
+    /// - Parameters:
+    ///   - title: Title to display.
+    ///   - bounds: Specifies the range to be increased or decreased.
+    ///   - number: The Binding to a value that you provide.
     public init(title: String? = nil, bounds: ClosedRange<Int>, number: Binding<Int>) {
         self.title = title
         self.bounds = bounds

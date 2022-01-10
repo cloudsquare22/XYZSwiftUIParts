@@ -7,12 +7,19 @@
 
 import SwiftUI
 
+/// A control that chekcs between on and off states.
 public struct CheckboxView: View {
     var title: String? = nil
     @Binding var check: Bool
     var titleFont: Font
     var checkboxFont: Font
 
+    /// Creates a CheckboxView.
+    /// - Parameters:
+    ///   - title: Title to display.
+    ///   - check: A binding to a property that determines whether the check is on or off.
+    ///   - titleFont: Specify the font for the title.
+    ///   - checkboxFont: Specify the font of the check box.
     public init(title: String? = nil, check: Binding<Bool>, titleFont: Font = .body, checkboxFont: Font = .body) {
         self.title = title
         self._check = check
